@@ -1,8 +1,10 @@
 {
-  "name": "myApp",
+  "name": "Demo",
+  "homepage": "http://Siva-Coder.github.io/ionic-react",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@capacitor/android": "^2.4.1",
     "@capacitor/core": "2.4.1",
     "@ionic/react": "^5.0.7",
     "@ionic/react-router": "^5.0.7",
@@ -25,9 +27,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && npx cap copy",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,7 +49,8 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "2.4.1"
+    "@capacitor/cli": "2.4.1",
+    "gh-pages": "^3.1.0"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project by SIVA_Developer"
 }
